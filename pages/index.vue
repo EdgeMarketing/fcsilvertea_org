@@ -24,7 +24,7 @@
     <img
       src="/images/scallop-divider.svg"
       alt=""
-      class="absolute left-0 w-full -bottom-2"
+      class="absolute left-0 w-full -bottom-4"
     />
 
     <!-- Center Content -->
@@ -43,9 +43,14 @@
         Helena, MT
       </div>
 
-      <button class="px-10 py-2 my-8 font-serif text-lg text-white bg-brand5 hover:opacity-90">
+      <a
+        href="https://us.givergy.com/SilverTea2025/?controller=tickets"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-10 py-2 my-8 font-serif text-lg text-white bg-brand5 hover:opacity-90"
+      >
         RSVP
-      </button>
+      </a>
     </div>
   </section>
 
@@ -105,18 +110,28 @@
 
       <div class="flex flex-wrap justify-center gap-6 mb-4">
         <div>
-          <p class="px-6 py-2 font-bold tracking-[4px] text-white uppercase bg-brand6">
+          <a
+            href="https://us.givergy.com/SilverTea2025/?controller=tickets"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-2 font-bold tracking-[4px] text-white uppercase bg-brand6"
+          >
             Individual Tickets
-          </p>
-          <p class="mt-2 italic text-brand9">
+          </a>
+          <p class="mt-4 italic text-brand9">
             $50/each
           </p>
         </div>
         <div>
-          <p class="px-6 py-2 font-bold tracking-[4px] text-white uppercase bg-brand5">
+          <a
+            href="https://us.givergy.com/SilverTea2025/?controller=tickets"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-2 font-bold tracking-[4px] text-white uppercase bg-brand5"
+          >
             Table of 8
-          </p>
-          <p class="mt-2 italic text-brand9">
+          </a>
+          <p class="mt-4 italic text-brand9">
             $400
           </p>
         </div>
