@@ -1,7 +1,9 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  ssr: false,
+  nitro: {
+    preset: 'static',
+  },
   compatibilityDate: '2024-11-01',
   app: {
     head: {
