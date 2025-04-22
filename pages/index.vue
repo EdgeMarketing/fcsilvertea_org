@@ -1,3 +1,8 @@
+<script setup>
+const now = new Date()
+const showRSVP = now >= new Date('2025-05-02T00:00:00')
+</script>
+
 <template>
   <Head>
     <title>Silver Tea | Florence Crittenton</title>
@@ -43,14 +48,15 @@
         Helena, MT
       </div>
 
-      <a
-        href="https://us.givergy.com/SilverTea2025/?controller=tickets"
+      <component
+        :is="showRSVP ? 'a' : 'div'"
+        :href="showRSVP ? 'https://us.givergy.com/SilverTea2025/?controller=tickets' : null"
         target="_blank"
         rel="noopener noreferrer"
-        class="px-10 py-2 my-8 font-serif text-lg text-white bg-brand5 hover:opacity-90"
+        class="inline-block px-10 py-2 my-8 font-serif text-lg text-center text-white cursor-pointer bg-brand5 hover:opacity-90"
       >
-        RSVP
-      </a>
+        {{ showRSVP ? 'RSVP' : 'Tickets go on sale May 2nd' }}
+      </component>
     </div>
   </section>
 
@@ -109,28 +115,33 @@
       </p>
 
       <div class="flex flex-wrap justify-center gap-6 mb-4">
+        <!-- Individual Ticket -->
         <div>
-          <a
-            href="https://us.givergy.com/SilverTea2025/?controller=tickets"
+          <component
+            :is="showRSVP ? 'a' : 'div'"
+            :href="showRSVP ? 'https://us.givergy.com/SilverTea2025/?controller=tickets' : null"
             target="_blank"
             rel="noopener noreferrer"
-            class="px-6 py-2 font-bold tracking-[4px] text-white uppercase bg-brand6"
+            class="px-6 py-2 font-bold tracking-[4px] text-white uppercase bg-brand6 text-center block cursor-pointer"
           >
             Individual Tickets
-          </a>
+          </component>
           <p class="mt-4 italic text-brand9">
             $50/each
           </p>
         </div>
+
+        <!-- Table of 8 -->
         <div>
-          <a
-            href="https://us.givergy.com/SilverTea2025/?controller=tickets"
+          <component
+            :is="showRSVP ? 'a' : 'div'"
+            :href="showRSVP ? 'https://us.givergy.com/SilverTea2025/?controller=tickets' : null"
             target="_blank"
             rel="noopener noreferrer"
-            class="px-6 py-2 font-bold tracking-[4px] text-white uppercase bg-brand5"
+            class="px-6 py-2 font-bold tracking-[4px] text-white uppercase bg-brand5 text-center block cursor-pointer"
           >
             Table of 8
-          </a>
+          </component>
           <p class="mt-4 italic text-brand9">
             $400
           </p>
@@ -147,7 +158,7 @@
   <!-- Afternoon Tea Menu Section -->
   <section class="relative px-4 pt-20 pb-32 text-center text-white bg-brand6">
     <!-- Top scallop divider -->
-    <img src="/images/scallop-divider.svg" alt="" class="absolute left-0 z-50 w-full -translate-y-full top-2" />
+    <img src="/images/scallop-divider.svg" alt="" class="absolute left-0 z-50 w-full -translate-y-full top-3" />
 
     <!-- Background images -->
     <img src="/images/crumpets.png" alt="" class="absolute left-0 hidden h-2/3 xl:block" />
