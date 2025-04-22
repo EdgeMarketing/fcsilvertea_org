@@ -10,7 +10,7 @@ const showRSVP = now >= new Date('2025-05-02T00:00:00')
     <link rel="canonical" href="https://fcsilvertea.org/" />
     <meta property="og:title" content="Silver Tea | Florence Crittenton" />
     <meta property="og:description" content="Join us in celebrating 125 years of hope, compassion and dignity at Florence Crittenton Family Services. Enjoy an elegant afternoon tea in the grandeur of the Montana State Capitol Rotunda, featuring an assortment of delicate sandwiches, decadent cakes, and fine tea." />
-    <meta property="og:image" content="/images/og-image.png" />
+    <meta property="og:image" content="https://fcsilvertea.org/images/og-image.png" />
   </Head>
 
   <section class="relative w-full h-screen overflow-hidden bg-brand1 text-brand9">
