@@ -213,6 +213,8 @@ const showRSVP = now >= new Date('2025-05-02T00:00:00')
     </div>
   </div>
 
+  <sponsors />
+
   <!-- Footer -->
   <footer class="px-4 py-12 bg-white">
     <div class="flex flex-col items-center justify-between gap-8 mx-auto max-w-7xl md:flex-row">
