@@ -2,12 +2,11 @@
   "name": "fcsilvertea_org",
   "description": "A really cool Edge Site for fcsilvertea_org",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "rm -rf .nuxt && nuxt dev --host --port=3000",
-    "emulator": "rm -rf .nuxt && nuxt dev --dotenv .env.dev --host --port=3000",
-    "build-emulator": "nuxt generate --dotenv .env.dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "generate:images": "node scripts/generateImageManifest.mjs",
+    "build": "npm run generate:images && nuxt build",
+    "dev": "npm run generate:images  && rm -rf .nuxt && nuxt dev --host --port=3000",
+    "generate": "npm run generate:images && nuxt generate",
+    "preview": "npm run generate:images && nuxt build && npx wrangler pages dev dist",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
@@ -26,6 +25,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.11.0",
-    "eslint": "^9"
+    "eslint": "^9",
+    "wrangler": "^4.15.2"
   }
 }

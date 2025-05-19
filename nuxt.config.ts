@@ -1,8 +1,13 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
+  ssr: true,
   nitro: {
-    preset: 'static',
+    preset: 'cloudflare-pages',
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'], // Starting point for the crawler
+    },
   },
   compatibilityDate: '2024-11-01',
   app: {
